@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flatpickr</title>
+    <link rel="stylesheet" href="/static/dist/bundle.css">
+
+</head>
+
+<style>
+    .flatpickr-wrapper {
+        width: 100%;
+    }
+
+    .flatpickr-calendar {
+        width: 100%;
+    }
+
+    #mydal .modal-dialog {
+        -webkit-transform: translate(0, 50%);
+        -o-transform: translate(0, 50%);
+        transform: translate(0, 50%);
+    }
+</style>
+
+<body>
+
+    <div class="d-flex justify-content-center bg-dark align-items-center h-100">
+        <h1 class="text-muted p-5">flatpickr</h1>
+    </div>
+    <div class="d-flex justify-content-center bg-dark align-items-center  p-5">
+        <!-- Button trigger modal -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <button type="button" class="btn btn-outline-secondary text-white w-100" data-toggle="modal" data-target="#mydal">
+                        Modal
+                    </button>
+                </div>
+                <div class="col-sm">
+                    <a class="btn btn-outline-secondary text-white w-100" href="/datetime">
+                        DateTime
+                    </a>
+                </div>
+
+                <div class="col-sm">
+                    <a class="btn btn-outline-secondary text-white w-100" href="/date">
+                        Date
+                    </a>
+                </div>
+
+                <div class="col-sm">
+                    <a class="btn btn-outline-secondary text-white w-100" href="/time">
+                        Time
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Modal -->
+
+    <div class="modal fade" id="mydal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">flatpickr</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <form id="form_id">
+                        <div class="form-row align-items-center">
+                            <div class="col-sm-12 mb-4">
+                                <label class="sr-only" for="start_id">Start</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend w-25">
+                                        <div class="input-group-text w-100">Start</div>
+                                    </div>
+                                    <div class="flatpickr-wrapper w-75">
+                                        <input id="start_id" type="text" class="form-control flatpickr js-flatpickr-time" readonly="readonly">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mb-4">
+                                <label class="sr-only" for="end_id">End</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend w-25">
+                                        <div class="input-group-text w-100">End</div>
+                                    </div>
+                                    <div class="flatpickr-wrapper w-75">
+                                        <input id="end_id" type="text" class="form-control flatpickr js-flatpickr-time" readonly="readonly">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-primary col-sm-12">Save</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/dist/bundle.js"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
